@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Tiro+Bangla:ital@0;1&display=swap');
+
+@import "tailwindcss";
+
+
+@theme {
+  --font-Tiro: "Tiro Bangla", serif;
+  --font-Karla: "Karla", sans-serif;
+  --font-Outfit: "Outfit", sans-serif;
+  --font-Noto: "Noto Sans", sans-serif;
+}
+
+
+
+
+/* This design create for horizantal line hide */
+.no-scrollbar::-webkit-scrollbar {
+     display: none;
+}
+.no-scrollbar {
+     -ms-overflow-style: none;
+     scrollbar-width: none;
+}
