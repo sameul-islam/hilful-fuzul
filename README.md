@@ -1,36 +1,18 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Hilful Fuzul Official Website
 
-## Getting Started
+This project is dedicated to creating the official website for **Hilful Fuzul**, a humanitarian organization based in our community. Hilful Fuzul has been serving the underprivileged, including orphans, widows, the sick, and those facing various hardships, for the past five years. The organization also plays a key role in organizing religious and community events, such as Ramadan celebrations, Eid festivals, and supporting the distribution of Zakat, Sadaqah, and Fitra to those in need.
 
-First, run the development server:
+Despite its significant impact, Hilful Fuzul has been operating without an official website, leaving it disconnected from modern digital presence. Recognizing the importance of extending its reach and accessibility, I have taken on the responsibility of designing and developing a complete, **premium-quality website** for the organization. As a humanitarian initiative, this project is being undertaken completely **pro bono**, with no financial compensation, to ensure that the organization's mission can reach a wider audience and inspire greater support.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The project officially commenced on **February 2, 2026**, and will be continuously updated with new features, enhancements, and improvements to ensure the website remains a modern, functional, and engaging platform for both the community and supporters. This endeavor reflects the core values of Hilful Fuzul, and as a web developer, I am committed to maintaining the highest standards of quality, usability, and empathy in every aspect of this project.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+> This website is not only a technical project but also a heartfelt contribution to a humanitarian cause. Every feature, design choice, and interaction is intended to reflect the compassion and dedication of Hilful Fuzul toward the community it serves.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## Development Log
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Day 1 - Feb 2, 2026
+- Navbar component created
+- Dropdown menus implemented 
+- Hero section created
