@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ChevronDown, Heart, Home, Info, HandCoins, ImageIcon, Mail, Sparkles, Moon, HeartPulse, Logs, TextAlignJustify } from 'lucide-react';
+import { X, ChevronDown, Home, Info, HandCoins, ImageIcon, Mail, Sparkles, HeartPulse, TextAlignJustify, ChevronRight } from 'lucide-react';
 import logo from '@/public/logo.png';
 
 const Navbar = () => {
@@ -80,7 +80,7 @@ const Navbar = () => {
           : 'bg-sky-300/90 backdrop-blur-md border-b border-sky-500'
       }`}
     >
-      <nav className=" w-full xl:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav className=" w-full xl:max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link href="/">
@@ -100,7 +100,7 @@ const Navbar = () => {
               <Link
                 key={link.href}
                 href={link.href}
-                className="px-4 py-2 text-gray-700 hover:text-gray-800 hover:bg-sky-400 transition-all duration-500 font-medium"
+                className="px-4 py-2 text-gray-700 hover:text-gray-800 hover:bg-sky-400 transition-all duration-500 font-semibold"
               >
                 {link.label}
               </Link>
@@ -113,7 +113,7 @@ const Navbar = () => {
                   setWorkOpen(!workOpen);
                   setZakatOpen(false);
                 }}
-                className={`flex items-center gap-1 px-4 py-2  font-medium transition-all duration-500 ${
+                className={`flex items-center gap-1 px-4 py-2  font-semibold transition-all duration-500 ${
                   workOpen
                     ? 'text-gray-700 bg-sky-400'
                     : 'text-gray-700 hover:text-gray-800 hover:bg-sky-400'
@@ -162,7 +162,7 @@ const Navbar = () => {
                             <span className="text-2xl group-hover:scale-110 transition-transform">
                               {link.emoji}
                             </span>
-                            <span className="text-gray-700 group-hover:text-sky-600 font-medium">
+                            <span className="text-gray-700 text-sm group-hover:text-sky-600 font-semibold">
                               {link.label}
                             </span>
                           </Link>
@@ -176,7 +176,7 @@ const Navbar = () => {
 
             <Link
               href="/donation"
-              className="px-4 py-2 text-gray-700 hover:text-gray-800 hover:bg-sky-400 transition-all duration-500 font-medium"
+              className="px-4 py-2 text-gray-700 hover:text-gray-800 hover:bg-sky-400 transition-all duration-500 font-semibold"
             >
               Donation
             </Link>
@@ -188,7 +188,7 @@ const Navbar = () => {
                   setZakatOpen(!zakatOpen);
                   setWorkOpen(false);
                 }}
-                className={`flex items-center gap-1 px-4 py-2  font-medium transition-all duration-500 ${
+                className={`flex items-center gap-1 px-4 py-2  font-semibold transition-all duration-500 ${
                   zakatOpen
                     ? 'text-gray-700 bg-sky-400'
                     : 'text-gray-700 hover:text-gray-800 hover:bg-sky-400'
@@ -237,7 +237,7 @@ const Navbar = () => {
                             <span className="text-2xl group-hover:scale-110 transition-transform">
                               {link.emoji}
                             </span>
-                            <span className="text-gray-700 group-hover:text-sky-600 font-medium">
+                            <span className="text-gray-700 group-hover:text-sky-600 font-semibold text-sm">
                               {link.label}
                             </span>
                           </Link>
@@ -251,13 +251,13 @@ const Navbar = () => {
 
             <Link
               href="/gallery"
-              className="px-4 py-2 text-gray-700 hover:text-gray-800 hover:bg-sky-400 transition-all duration-200 font-medium"
+              className="px-4 py-2 text-gray-700 hover:text-gray-800 hover:bg-sky-400 transition-all duration-200 font-semibold"
             >
               Gallery
             </Link>
             <Link
               href="/contact"
-              className="px-4 py-2  text-gray-700 hover:text-gray-800 hover:bg-sky-400 transition-all duration-200 font-medium"
+              className="px-4 py-2  text-gray-700 hover:text-gray-800 hover:bg-sky-400 transition-all duration-200 font-semibold"
             >
               Contact
             </Link>
@@ -268,11 +268,26 @@ const Navbar = () => {
                 href="/donation"
                 className="ml-2 flex items-center gap-2 bg-sky-600 hover:bg-sky-700 text-white px-6 py-2.5 hover:shadow-lg hover:shadow-sky-500/30 transition-all duration-500 font-semibold"
               >
-                <HeartPulse size={18} className="text-white/80" />
+                <HeartPulse size={18} className="text-white/90" />
                 Donate Now
               </Link>
             </div>
           </div>
+
+
+
+
+
+         {/* Donate Button for small & midium devise */}
+            <div className='lg:hidden'>
+              <Link
+                href="/donation"
+                className="ml-2 flex items-center gap-2 rounded-sm bg-sky-600 hover:bg-sky-700 text-white px-6 py-2.5 hover:shadow-lg hover:shadow-sky-500/30 transition-all duration-500 font-semibold"
+              >
+                <HeartPulse size={18} className="text-white/90" />
+                Donate Now
+              </Link>
+            </div>
 
 
 
@@ -358,10 +373,10 @@ const Navbar = () => {
                   <Link
                     href="/about"
                     onClick={() => setMobileOpen(false)}
-                    className="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/80 transition-all duration-200 group"
+                    className="flex items-center gap-3 px-4 py-3  hover:bg-sky-200 transition-all duration-500 group"
                   >
-                    <Info size={20} className="text-sky-600 group-hover:scale-110 transition-transform" />
-                    <span className="text-gray-700 font-medium group-hover:text-sky-600">About</span>
+                    <Info size={20} className="text-sky-600  group-hover:scale-110 transition-transform" />
+                    <span className="text-gray-700 font-semibold group-hover:text-gray-800">About</span>
                   </Link>
                 </motion.div>
 
@@ -372,20 +387,20 @@ const Navbar = () => {
                   transition={{ delay: 0.2 }}
                   className="space-y-1"
                 >
-                  <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider">
-                    Our Work
+                  <div className="px-4 py-2 flex items-center font-bold text-gray-700 ">
+                    Our Work <ChevronRight size={26}/>
                   </div>
                   {ourWorkLinks.map((link, index) => (
                     <Link
                       key={link.href}
                       href={link.href}
                       onClick={() => setMobileOpen(false)}
-                      className="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/80 transition-all duration-200 group"
+                      className="flex items-center gap-3 px-4 py-3  hover:bg-sky-200 transition-all duration-500 group"
                     >
-                      <span className="text-xl group-hover:scale-110 transition-transform">
+                      <span className="text-lg group-hover:scale-110 transition-transform">
                         {link.emoji}
                       </span>
-                      <span className="text-gray-700 font-medium group-hover:text-sky-600">
+                      <span className="text-gray-500 font-semibold text-xs group-hover:text-sky-600 underline">
                         {link.label}
                       </span>
                     </Link>
@@ -401,10 +416,10 @@ const Navbar = () => {
                   <Link
                     href="/donation"
                     onClick={() => setMobileOpen(false)}
-                    className="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/80 transition-all duration-200 group"
+                    className="flex items-center gap-3 px-4 py-3  hover:bg-sky-200 transition-all duration-500 group"
                   >
-                    <HandCoins size={20} className="text-sky-600 group-hover:scale-110 transition-transform" />
-                    <span className="text-gray-700 font-medium group-hover:text-sky-600">Donation</span>
+                    <HandCoins size={20} className="text-sky-700 group-hover:scale-110 transition-transform" />
+                    <span className="text-gray-700 font-semibold group-hover:text-sky-600">Donation</span>
                   </Link>
                 </motion.div>
 
@@ -415,20 +430,20 @@ const Navbar = () => {
                   transition={{ delay: 0.3 }}
                   className="space-y-1"
                 >
-                  <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider">
-                    Zakat & Sadaqah
+                  <div className="px-4 py-2 flex items-center font-bold text-gray-700 ">
+                    Zakat & Sadaqah <ChevronRight size={26}/>
                   </div>
                   {zakatLinks.map((link, index) => (
                     <Link
                       key={link.href}
                       href={link.href}
                       onClick={() => setMobileOpen(false)}
-                      className="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/80 transition-all duration-200 group"
+                      className="flex items-center gap-3 px-4 py-3  hover:bg-sky-200 transition-all duration-500 group"
                     >
-                      <span className="text-xl group-hover:scale-110 transition-transform">
+                      <span className="text-lg group-hover:scale-110 transition-transform">
                         {link.emoji}
                       </span>
-                      <span className="text-gray-700 font-medium group-hover:text-sky-600">
+                      <span className="text-gray-500 font-semibold text-xs group-hover:text-sky-600 underline">
                         {link.label}
                       </span>
                     </Link>
@@ -444,10 +459,10 @@ const Navbar = () => {
                   <Link
                     href="/gallery"
                     onClick={() => setMobileOpen(false)}
-                    className="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/80 transition-all duration-200 group"
+                    className="flex items-center gap-3 px-4 py-3  hover:bg-sky-200 transition-all duration-500 group"
                   >
                     <ImageIcon size={20} className="text-sky-600 group-hover:scale-110 transition-transform" />
-                    <span className="text-gray-700 font-medium group-hover:text-sky-600">Gallery</span>
+                    <span className="text-gray-700 font-semibold group-hover:text-sky-600">Gallery</span>
                   </Link>
                 </motion.div>
 
@@ -460,10 +475,10 @@ const Navbar = () => {
                   <Link
                     href="/contact"
                     onClick={() => setMobileOpen(false)}
-                    className="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/80 transition-all duration-200 group"
+                    className="flex items-center gap-3 px-4 py-3  hover:bg-sky-200 transition-all duration-500 group"
                   >
                     <Mail size={20} className="text-sky-600 group-hover:scale-110 transition-transform" />
-                    <span className="text-gray-700 font-medium group-hover:text-sky-600">Contact</span>
+                    <span className="text-gray-700 font-semibold group-hover:text-sky-600">Contact</span>
                   </Link>
                 </motion.div>
 
@@ -477,9 +492,9 @@ const Navbar = () => {
                   <Link
                     href="/donation"
                     onClick={() => setMobileOpen(false)}
-                    className="flex items-center justify-center gap-2 w-full bg-gradient-to-r from-sky-500 to-blue-600 text-white py-4 rounded-2xl shadow-lg shadow-sky-500/30 hover:shadow-xl hover:shadow-sky-500/40 transition-all duration-300 font-semibold"
+                    className="flex items-center justify-center gap-2 w-full bg-sky-600 text-white py-4 shadow-lg shadow-sky-500/30 hover:shadow-xl hover:shadow-sky-500/40 transition-all duration-500 font-semibold"
                   >
-                    <Heart size={20} className="fill-white" />
+                    <HeartPulse size={20} className="text-white/90" />
                     Donate Now
                     <Sparkles size={18} className="animate-pulse" />
                   </Link>
@@ -487,8 +502,8 @@ const Navbar = () => {
               </div>
 
               {/* Footer */}
-              <div className="sticky bottom-0 bg-gradient-to-t from-white to-transparent p-6 text-center">
-                <p className="text-sm text-gray-500">
+              <div className="sticky bottom-0 bg-sky-200 p-6 text-center">
+                <p className="text-sm text-gray-600">
                   Making a difference together 💙
                 </p>
               </div>
@@ -501,3 +516,13 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+
+
+
+
+
+
+
+
