@@ -136,15 +136,21 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex items-center gap-4 justify-center"
+            className="flex flex-col sm:flex-row items-center gap-4 justify-center"
           >
             <Link
               href="/donation"
               className="relative flex items-center gap-3 bg-sky-600 hover:bg-sky-700 px-8 py-4 font-semibold shadow-lg shadow-sky-500/30 hover:shadow-xl transition-all duration-500"
             >
               <HeartPulse size={20} className="text-white/90 animate-bounce" />
-              Donate Now
+              দান করুন
               <Sparkles size={18} className="animate-pulse" />
+            </Link>
+            <Link
+              href="/about"
+              className=" border border-sky-500 border-dotted hover:bg-white hover:text-gray-800 text-white px-8 py-4 font-semibold transition-all duration-500"
+            >
+              আরও জানুন
             </Link>
           </motion.div>
         </motion.div>

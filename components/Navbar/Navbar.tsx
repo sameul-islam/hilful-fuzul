@@ -55,21 +55,21 @@ const Navbar = () => {
   };
 
   const navLinks = [
-    { href: '/', label: 'Home', icon: Home },
-    { href: '/about', label: 'About', icon: Info },
+    { href: '/', label: 'হোম', icon: Home },
+    { href: '/about', label: 'আমাদের সম্পর্কে', icon: Info },
   ];
 
   const ourWorkLinks = [
-    { href: '/our-work/orphans', label: 'Orphans Support', emoji: '👶' },
-    { href: '/our-work/disabled', label: 'Disabled Care', emoji: '♿' },
-    { href: '/our-work/elderly', label: 'Elderly Support', emoji: '👴' },
-    { href: '/our-work/emergency', label: 'Emergency Relief', emoji: '🚨' },
+    { href: '/our-work/orphans', label: 'এতিমদের সহায়তা', emoji: '👶' },
+    { href: '/our-work/disabled', label: 'প্রতিবন্ধী সেবা', emoji: '♿' },
+    { href: '/our-work/elderly', label: 'বয়স্কদের সহায়তা', emoji: '👴' },
+    { href: '/our-work/emergency', label: 'জরুরি ত্রাণ', emoji: '🚨' },
   ];
 
   const zakatLinks = [
-    { href: '/zakat', label: 'Zakat', emoji: '🌙' },
-    { href: '/sadaqah', label: 'Sadaqah', emoji: '💝' },
-    { href: '/fidya', label: 'Fidya & Kaffarah', emoji: '🤲' },
+    { href: '/zakat', label: 'যাকাত', emoji: '🌙' },
+    { href: '/sadaqah', label: 'সাদাকাহ', emoji: '💝' },
+    { href: '/fidya', label: 'ফিতরা ও কাফফারা', emoji: '🤲' },
   ];
 
   return (
@@ -95,7 +95,7 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-1">
+          <div className="hidden xl:flex items-center gap-1">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -119,7 +119,7 @@ const Navbar = () => {
                     : 'text-gray-700 hover:text-gray-800 hover:bg-sky-400'
                 }`}
               >
-                Our Work
+               আমাদের কাজ
                 <motion.div
                   animate={{ rotate: workOpen ? 180 : 0 }}
                   transition={{ duration: 0.2 }}
@@ -175,10 +175,10 @@ const Navbar = () => {
             </div>
 
             <Link
-              href="/projects"
+              href="/galary"
               className="px-4 py-2 text-gray-700 hover:text-gray-800 hover:bg-sky-400 transition-all duration-200 font-semibold"
             >
-              Projects
+              গ্যালারি
             </Link>
 
             {/* Zakat & Sadaqah Dropdown */}
@@ -194,7 +194,7 @@ const Navbar = () => {
                     : 'text-gray-700 hover:text-gray-800 hover:bg-sky-400'
                 }`}
               >
-                Zakat & Sadaqah
+                যাকাত ও সাদাকাহ
                 <motion.div
                   animate={{ rotate: zakatOpen ? 180 : 0 }}
                   transition={{ duration: 0.2 }}
@@ -254,7 +254,7 @@ const Navbar = () => {
               href="/contact"
               className="px-4 py-2  text-gray-700 hover:text-gray-800 hover:bg-sky-400 transition-all duration-200 font-semibold"
             >
-              Contact
+              যোগাযোগ
             </Link>
 
           </div>
@@ -265,7 +265,7 @@ const Navbar = () => {
                 className="ml-2 flex items-center gap-2 bg-sky-600 hover:bg-sky-700 text-white px-6 py-2.5 hover:shadow-lg hover:shadow-sky-500/30 transition-all duration-500 font-semibold"
               >
                 <HeartPulse size={18} className="text-white/90" />
-                Donate Now
+                দান করুন
               </Link>
             </div>
 
@@ -278,7 +278,7 @@ const Navbar = () => {
           <motion.button
             whileTap={{ scale: 0.9 }}
             onClick={() => setMobileOpen(true)}
-            className="lg:hidden p-2 rounded-sm cursor-pointer hover:bg-sky-400 transition-colors duration-500"
+            className="xl:hidden p-2 rounded-sm cursor-pointer hover:bg-sky-400 transition-colors duration-500"
           >
             <TextAlignJustify size={28} className="text-gray-700" />
           </motion.button>
@@ -295,7 +295,7 @@ const Navbar = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setMobileOpen(false)}
-              className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 lg:hidden"
+              className="fixed inset-0 bg-black/60 h-screen z-40 xl:hidden"
             />
 
             {/* Drawer */}
@@ -304,7 +304,7 @@ const Navbar = () => {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-              className="fixed right-0 top-0 bottom-0 w-85 sm:w-[60%] h-screen bg-linear-to-br from-sky-50 to-sky-100 z-50 shadow-2xl lg:hidden overflow-y-auto no-scrollbar"
+              className="fixed right-0 top-0 bottom-0 w-85 sm:w-[60%] lg:w-[40%] h-screen bg-linear-to-br from-sky-50 to-sky-100 z-50 shadow-2xl xl:hidden overflow-y-auto no-scrollbar"
             >
               {/* Header */}
               <div className="sticky top-0 bg-sky-300 rounded-b-xl border-b border-sky-500 px-6 py-2 flex items-center justify-between">
@@ -340,7 +340,7 @@ const Navbar = () => {
                     className="flex items-center gap-3 px-4 py-3  hover:bg-sky-200 transition-all duration-500 group"
                   >
                     <Home size={20} className="text-sky-600 font-semibold group-hover:scale-110 transition-transform" />
-                    <span className="text-gray-700 font-semibold group-hover:text-gray-800">Home</span>
+                    <span className="text-gray-700 font-semibold group-hover:text-gray-800">হোম</span>
                   </Link>
                 </motion.div>
 
@@ -356,7 +356,7 @@ const Navbar = () => {
                     className="flex items-center gap-3 px-4 py-3  hover:bg-sky-200 transition-all duration-500 group"
                   >
                     <Info size={20} className="text-sky-600  group-hover:scale-110 transition-transform" />
-                    <span className="text-gray-700 font-semibold group-hover:text-gray-800">About</span>
+                    <span className="text-gray-700 font-semibold group-hover:text-gray-800">আমাদের সম্পর্কে</span>
                   </Link>
                 </motion.div>
 
@@ -368,7 +368,7 @@ const Navbar = () => {
                   className="space-y-1"
                 >
                   <div className="px-4 py-2 flex items-center font-bold text-gray-700 ">
-                    Our Work <ChevronRight size={26}/>
+                    আমাদের কাজ <ChevronRight size={26}/>
                   </div>
                   {ourWorkLinks.map((link, index) => (
                     <Link
@@ -399,7 +399,7 @@ const Navbar = () => {
                     className="flex items-center gap-3 px-4 py-3  hover:bg-sky-200 transition-all duration-500 group"
                   >
                     <HandCoins size={20} className="text-sky-700 group-hover:scale-110 transition-transform" />
-                    <span className="text-gray-700 font-semibold group-hover:text-sky-600">Donation</span>
+                    <span className="text-gray-700 font-semibold group-hover:text-sky-600">অনুদান</span>
                   </Link>
                 </motion.div>
 
@@ -411,7 +411,7 @@ const Navbar = () => {
                   className="space-y-1"
                 >
                   <div className="px-4 py-2 flex items-center font-bold text-gray-700 ">
-                    Zakat & Sadaqah <ChevronRight size={26}/>
+                    যাকাত ও সাদাকাহ <ChevronRight size={26}/>
                   </div>
                   {zakatLinks.map((link, index) => (
                     <Link
@@ -437,12 +437,12 @@ const Navbar = () => {
                   transition={{ delay: 0.35 }}
                 >
                   <Link
-                    href="/projects"
+                    href="/galary"
                     onClick={() => setMobileOpen(false)}
                     className="flex items-center gap-3 px-4 py-3  hover:bg-sky-200 transition-all duration-500 group"
                   >
                     <ImageIcon size={20} className="text-sky-600 group-hover:scale-110 transition-transform" />
-                    <span className="text-gray-700 font-semibold group-hover:text-sky-600">Projects Gallery</span>
+                    <span className="text-gray-700 font-semibold group-hover:text-sky-600">গ্যালারি</span>
                   </Link>
                 </motion.div>
 
@@ -458,7 +458,7 @@ const Navbar = () => {
                     className="flex items-center gap-3 px-4 py-3  hover:bg-sky-200 transition-all duration-500 group"
                   >
                     <Mail size={20} className="text-sky-600 group-hover:scale-110 transition-transform" />
-                    <span className="text-gray-700 font-semibold group-hover:text-sky-600">Contact</span>
+                    <span className="text-gray-700 font-semibold group-hover:text-sky-600">যোগাযোগ</span>
                   </Link>
                 </motion.div>
 
@@ -475,7 +475,7 @@ const Navbar = () => {
                     className="flex items-center justify-center gap-2 w-full bg-sky-600 text-white py-4 shadow-lg shadow-sky-500/30 hover:shadow-xl hover:shadow-sky-500/40 transition-all duration-500 font-semibold"
                   >
                     <HeartPulse size={20} className="text-white/90" />
-                    Donate Now
+                    দান করুন
                     <Sparkles size={18} className="animate-pulse" />
                   </Link>
                 </motion.div>
@@ -484,7 +484,7 @@ const Navbar = () => {
               {/* Footer */}
               <div className="sticky bottom-0 bg-sky-200 p-6 text-center">
                 <p className="text-sm text-gray-600">
-                  Making a difference together 💙
+                চলো একসাথে একটা পরিবর্তন আনি 💙
                 </p>
               </div>
             </motion.div>
