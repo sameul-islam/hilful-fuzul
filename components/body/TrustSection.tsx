@@ -9,27 +9,27 @@ import {
 const items = [
   {
     icon: HeartHandshake,
-    title: "Humanitarian Support for All",
+    title: "সকলের জন্য মানবিক সহায়তা",
     description:
-      "We stand beside anyone facing hardship — widows, orphans, the sick, the elderly, and families in crisis — without limitation or discrimination.",
+      "আমরা বিধবা, এতিম, অসুস্থ, বয়স্ক এবং সংকটে থাকা পরিবারগুলির - যেকোনও বিপদের মুখোমুখি সকলের পাশে দাঁড়িয়েছি - কোনও সীমাবদ্ধতা বা বৈষম্য ছাড়াই।",
   },
   {
     icon: HandCoins,
-    title: "Zakat, Sadaqah & Emergency Aid",
+    title: "যাকাত, সাদাকাহ এবং জরুরী সাহায্য",
     description:
-      "From obligatory Zakat to voluntary Sadaqah and urgent relief, we ensure your donations reach those who need them most, responsibly and ethically.",
+      "ফরজ যাকাত থেকে শুরু করে স্বেচ্ছায় সাদাকা এবং জরুরি ত্রাণ, আমরা নিশ্চিত করি যে আপনার অনুদান তাদের কাছে পৌঁছায় যাদের সবচেয়ে বেশি প্রয়োজন, দায়িত্বশীল এবং নীতিগতভাবে।",
   },
   {
     icon: Users,
-    title: "Community-Based & Volunteer Driven",
+    title: "সম্প্রদায়-ভিত্তিক এবং স্বেচ্ছাসেবক চালিত",
     description:
-      "Built and operated by the local community, our work is powered by sincere volunteers committed to serving humanity with dignity.",
+      "স্থানীয় সম্প্রদায় দ্বারা নির্মিত এবং পরিচালিত, আমাদের কাজটি মর্যাদার সাথে মানবতার সেবা করার জন্য প্রতিশ্রুতিবদ্ধ আন্তরিক স্বেচ্ছাসেবকদের দ্বারা পরিচালিত।",
   },
   {
     icon: ShieldCheck,
-    title: "Trust, Transparency & Accountability",
+    title: "আস্থা, স্বচ্ছতা এবং জবাবদিহিতা",
     description:
-      "We prioritize honesty and transparency in every action, so donors can give with confidence and peace of mind.",
+      "আমরা প্রতিটি কাজে সততা এবং স্বচ্ছতাকে অগ্রাধিকার দিই, যাতে দাতারা আত্মবিশ্বাস এবং মানসিক প্রশান্তি সহকারে দান করতে পারেন।",
   },
 ];
 
@@ -46,13 +46,10 @@ export default function TrustSection() {
           className="mx-auto max-w-3xl text-center"
         >
           <h2 className="text-2xl font-semibold font-Karla tracking-tight text-slate-900 sm:text-3xl">
-            A Humanitarian Organization Built on Trust & Responsibility
+            বিশ্বাস ও দায়িত্বের উপর নির্মিত একটি মানবিক সংস্থা
           </h2>
           <p className="mt-4 font-Outfit text-slate-700 lg:text-lg">
-            Hilful Fuzul exists to support people in all forms of hardship —
-            social, financial, medical, and emergency situations — while
-            upholding the Islamic values of compassion, justice, and collective
-            responsibility.
+           হিলফুল ফুজুল সকল ধরণের কষ্টে মানুষকে সহায়তা করার জন্য বিদ্যমান — সামাজিক, আর্থিক, চিকিৎসা এবং জরুরি পরিস্থিতিতে — যখন করুণা, ন্যায়বিচার এবং সম্মিলিত দায়িত্বের ইসলামী মূল্যবোধকে সমুন্নত রাখে।
           </p>
         </motion.div>
 

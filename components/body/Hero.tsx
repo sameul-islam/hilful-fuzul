@@ -127,10 +127,10 @@ const Hero = () => {
           className="text-white space-y-6"
         >
           <h1 className="text-3xl sm:text-4xl lg:text-6xl font-Outfit font-semibold leading-tight">
-            Make a Difference, One Heart at a Time
+            এক হৃদয়ে , এক পরিবর্তন আনুন
           </h1>
           <p className="text-base sm:text-lg lg:text-2xl font-Karla font-semibold text-white/90">
-            Join us in empowering the underprivileged, spreading hope, and changing lives.
+            সুবিধাবঞ্চিতদের ক্ষমতায়ন, আশা ছড়িয়ে দেওয়া এবং জীবন পরিবর্তনে আমাদের সাথে যোগ দিন।
           </p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
