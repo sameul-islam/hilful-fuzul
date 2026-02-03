@@ -175,10 +175,10 @@ const Navbar = () => {
             </div>
 
             <Link
-              href="/donation"
-              className="px-4 py-2 text-gray-700 hover:text-gray-800 hover:bg-sky-400 transition-all duration-500 font-semibold"
+              href="/projects"
+              className="px-4 py-2 text-gray-700 hover:text-gray-800 hover:bg-sky-400 transition-all duration-200 font-semibold"
             >
-              Donation
+              Projects
             </Link>
 
             {/* Zakat & Sadaqah Dropdown */}
@@ -249,12 +249,7 @@ const Navbar = () => {
               </AnimatePresence>
             </div>
 
-            <Link
-              href="/gallery"
-              className="px-4 py-2 text-gray-700 hover:text-gray-800 hover:bg-sky-400 transition-all duration-200 font-semibold"
-            >
-              Gallery
-            </Link>
+
             <Link
               href="/contact"
               className="px-4 py-2  text-gray-700 hover:text-gray-800 hover:bg-sky-400 transition-all duration-200 font-semibold"
@@ -262,27 +257,12 @@ const Navbar = () => {
               Contact
             </Link>
 
+          </div>
             {/* Donate Button */}
             <div>
               <Link
                 href="/donation"
                 className="ml-2 flex items-center gap-2 bg-sky-600 hover:bg-sky-700 text-white px-6 py-2.5 hover:shadow-lg hover:shadow-sky-500/30 transition-all duration-500 font-semibold"
-              >
-                <HeartPulse size={18} className="text-white/90" />
-                Donate Now
-              </Link>
-            </div>
-          </div>
-
-
-
-
-
-         {/* Donate Button for small & midium devise */}
-            <div className='lg:hidden'>
-              <Link
-                href="/donation"
-                className="ml-2 flex items-center gap-2 rounded-sm bg-sky-600 hover:bg-sky-700 text-white px-6 py-2.5 hover:shadow-lg hover:shadow-sky-500/30 transition-all duration-500 font-semibold"
               >
                 <HeartPulse size={18} className="text-white/90" />
                 Donate Now
@@ -457,12 +437,12 @@ const Navbar = () => {
                   transition={{ delay: 0.35 }}
                 >
                   <Link
-                    href="/gallery"
+                    href="/projects"
                     onClick={() => setMobileOpen(false)}
                     className="flex items-center gap-3 px-4 py-3  hover:bg-sky-200 transition-all duration-500 group"
                   >
                     <ImageIcon size={20} className="text-sky-600 group-hover:scale-110 transition-transform" />
-                    <span className="text-gray-700 font-semibold group-hover:text-sky-600">Gallery</span>
+                    <span className="text-gray-700 font-semibold group-hover:text-sky-600">Projects Gallery</span>
                   </Link>
                 </motion.div>
 

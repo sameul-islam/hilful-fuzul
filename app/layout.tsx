@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar/Navbar";
 
 
 export const metadata: Metadata = {
-  title: "HILFUL FUZUL || Humanity & Charity Organaigation",
+  title: "HILFUL FUZUL || Humanity & Charity Organization",
   description: "",
 };
 

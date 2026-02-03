@@ -12,7 +12,10 @@ The project officially commenced on **February 2, 2026**, and will be continuous
 
 ## Development Log
 
-### Day 1 - Feb 2, 2026
+### Day 1 - Feb 2, 2026                   
 - Navbar component created
 - Dropdown menus implemented 
 - Hero section created
+
+### Day 2 - Feb 3, 2026
+- Created trustSection and what we do section with completly mobile responsive.

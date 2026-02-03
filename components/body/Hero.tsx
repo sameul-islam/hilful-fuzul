@@ -100,10 +100,12 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import heroImg from '@/public/hero-image.jpg';
+import Link from 'next/link';
+import { HeartPulse, Sparkles } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="relative w-full h-[70vh] sm:h-[80vh]  overflow-hidden">
+    <section className="relative w-full h-[70vh] sm:h-[80vh] xl:h-[85vh]  overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
@@ -113,7 +115,7 @@ const Hero = () => {
           className="object-cover object-center"
           priority
         />
-        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 bg-black/50"></div>
       </div>
 
       {/* Hero Content */}
@@ -124,20 +126,27 @@ const Hero = () => {
           transition={{ duration: 1 }}
           className="text-white space-y-6"
         >
-          <h1 className="text-3xl sm:text-4xl lg:text-6xl font-extrabold leading-tight">
-            Make a Difference, One Heart at a Time 💙
+          <h1 className="text-3xl sm:text-4xl lg:text-6xl font-Outfit font-semibold leading-tight">
+            Make a Difference, One Heart at a Time
           </h1>
-          <p className="text-base sm:text-lg lg:text-2xl font-medium text-white/90">
+          <p className="text-base sm:text-lg lg:text-2xl font-Karla font-semibold text-white/90">
             Join us in empowering the underprivileged, spreading hope, and changing lives.
           </p>
-          <motion.a
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            href="/donation"
-            className="inline-flex items-center gap-3 bg-sky-600 hover:bg-sky-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg shadow-lg shadow-sky-500/30 font-semibold text-base sm:text-lg transition-all duration-500"
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="flex items-center gap-4 justify-center"
           >
-            Donate Now
-          </motion.a>
+            <Link
+              href="/donation"
+              className="relative flex items-center gap-3 bg-sky-600 hover:bg-sky-700 px-8 py-4 font-semibold shadow-lg shadow-sky-500/30 hover:shadow-xl transition-all duration-500"
+            >
+              <HeartPulse size={20} className="text-white/90 animate-bounce" />
+              Donate Now
+              <Sparkles size={18} className="animate-pulse" />
+            </Link>
+          </motion.div>
         </motion.div>
       </div>
     </section>
