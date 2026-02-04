@@ -1,138 +1,127 @@
 "use client";
 
 import { useRef, useState, useEffect } from "react";
-import { ChevronsLeft, ChevronsRight } from "lucide-react";
-
+import { ChevronsLeft, ChevronsRight, Play } from "lucide-react";
 
 const videos = [
-  {
-    embedCode: '<iframe width="1401" height="788" src="https://www.youtube.com/embed/9pqdJ5Qmfn4" title="Your Donation: A Lifeline for #Bangladesh  Flood Victims 🤲" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
-    title: "বন্যার্ত মানুষের পাশে দাঁড়ানো",
-  },
-  {
-    embedCode: '<iframe width="1401" height="788" src="https://www.youtube.com/embed/Aj6_Btli2OU" title="Ramadan Food Pack distriution in Bangladesh 2025 | #charity #sadaqah #ramadan" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
-    title: "রমজানে খাদ্য সামগ্রী বিতরণ",
-  },
-  {
-    embedCode: '<iframe width="1401" height="788" src="https://www.youtube.com/embed/ucbq6ZYKtxM" title="Human Care Initiative - Winter Appeal Bangladesh 2018 with MuslimGiving.org" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
-    title: "শীতবস্ত্র বিতরণ কার্যক্রম",
-  },
-  {
-    embedCode: '<iframe width="1401" height="788" src="https://www.youtube.com/embed/b8E7ky0dpQQ" title="A Glimpse into the Lives of Bangladesh&#39;s Street Children | Muslim Charity UK | Mahmud&#39;s Creato" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
-    title: "অসহায় পরিবারের সহায়তা",
-  },
-  {
-    embedCode: '<iframe width="1401" height="788" src="https://www.youtube.com/embed/PUrYcJ34ORA" title="Orphanages in Bangladesh l 2019 l Pious Projects" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
-    title: "এতিম ও বিধবাদের পাশে আমরা",
-  },
+  { id: "9pqdJ5Qmfn4", title: "বন্যার্ত মানুষের পাশে দাঁড়ানো" },
+  { id: "Aj6_Btli2OU", title: "রমজানে খাদ্য সামগ্রী বিতরণ" },
+  { id: "ucbq6ZYKtxM", title: "শীতবস্ত্র বিতরণ কার্যক্রম" },
+  { id: "b8E7ky0dpQQ", title: "অসহায় পরিবারের সহায়তা" },
+  { id: "PUrYcJ34ORA", title: "এতিম ও বিধবাদের পাশে আমরা" },
 ];
 
 export default function ImpactVideos() {
-  const scrollRef = useRef<HTMLDivElement>(null);
-  const [canScrollLeft, setCanScrollLeft] = useState(false);
-  const [canScrollRight, setCanScrollRight] = useState(true);
+  const ref = useRef<HTMLDivElement>(null);
+  const [left, setLeft] = useState(false);
+  const [right, setRight] = useState(true);
+  const [active, setActive] = useState<string | null>(null);
 
-  // Check scroll position
-  const checkScroll = () => {
-    if (!scrollRef.current) return;
-    const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
-    setCanScrollLeft(scrollLeft > 0);
-    setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 10);
+  const check = () => {
+    if (!ref.current) return;
+    const { scrollLeft, scrollWidth, clientWidth } = ref.current;
+    setLeft(scrollLeft > 0);
+    setRight(scrollLeft < scrollWidth - clientWidth - 10);
   };
 
   useEffect(() => {
-    const slider = scrollRef.current;
-    if (slider) {
-      slider.addEventListener("scroll", checkScroll);
-      checkScroll();
-      return () => slider.removeEventListener("scroll", checkScroll);
-    }
+    const el = ref.current;
+    if (!el) return;
+    el.addEventListener("scroll", check);
+    check();
+    return () => el.removeEventListener("scroll", check);
   }, []);
 
-  const scroll = (direction: "left" | "right") => {
-    if (!scrollRef.current) return;
-
-    const scrollAmount = 380;
-    scrollRef.current.scrollBy({
-      left: direction === "left" ? -scrollAmount : scrollAmount,
+  const move = (dir: "left" | "right") => {
+    if (!ref.current) return;
+    const cardWidth = ref.current.firstElementChild?.clientWidth || 360;
+    ref.current.scrollBy({
+      left: dir === "left" ? -cardWidth : cardWidth,
       behavior: "smooth",
     });
   };
 
   return (
-    <section className="w-full bg-white py-14 lg:py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-14 lg:py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
-        <div className="mb-8 lg:mb-12">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center text-gray-900">
-            আমাদের কার্যক্রম ভিডিওতে দেখুন
+        <div className="text-center mb-10">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
+            আমাদের কার্যক্রম ভিডিওতে
           </h2>
-          <p className="mt-3 text-gray-600 mx-auto text-center text-base md:text-lg max-w-2xl">
-            আমরা কীভাবে মানুষের পাশে দাঁড়াই — তার কিছু বাস্তব চিত্র এখানে তুলে ধরা হয়েছে।
+          <p className="mt-2 text-gray-600 max-w-xl mx-auto">
+            বাস্তবে আমরা কীভাবে মানুষের পাশে দাঁড়াই — তার কিছু প্রামাণ্য চিত্র
           </p>
         </div>
 
-        {/* Video Slider Container */}
         <div className="relative">
-          {/* Desktop Navigation Buttons */}
-          {canScrollLeft && (
+          {/* Desktop Buttons */}
+          {left && (
             <button
-              onClick={() => scroll("left")}
-              className="hidden md:flex absolute -left-4 lg:-left-6 top-1/2 -translate-y-1/2 z-10 p-2 items-center justify-center rounded bg-sky-100 shadow-xl hover:shadow-2xl hover:bg-sky-300 transition-all duration-500 border border-gray-400"
-              aria-label="Previous videos"
+              onClick={() => move("left")}
+              className="hidden md:flex absolute -left-5 top-1/2 -translate-y-1/2 z-10 p-2 bg-white text-sky-700 shadow-lg rounded-full"
             >
-              <ChevronsLeft className="h-6 w-6 text-sky-700" />
+              <ChevronsLeft />
+            </button>
+          )}
+          {right && (
+            <button
+              onClick={() => move("right")}
+              className="hidden md:flex absolute -right-5 top-1/2 -translate-y-1/2 z-10 p-2 bg-white text-sky-700 shadow-lg rounded-full"
+            >
+              <ChevronsRight />
             </button>
           )}
 
-          {canScrollRight && (
-            <button
-              onClick={() => scroll("right")}
-              className="hidden md:flex absolute -right-4 lg:-right-6 top-1/2 -translate-y-1/2 z-10 p-2 items-center justify-center rounded bg-sky-100 shadow-xl hover:shadow-2xl hover:bg-sky-300 transition-all duration-500 border border-sky-400"
-              aria-label="Next videos"
-            >
-              <ChevronsRight className="h-6 w-6 text-sky-700" />
-            </button>
-          )}
-
-          {/* Video Scroll Area */}
+          {/* Slider */}
           <div
-            ref={scrollRef}
-            className="flex gap-4 lg:gap-6 overflow-x-auto scroll-smooth pb-4 no-scrollbar"
-            style={{
-              scrollbarWidth: "none",
-              msOverflowStyle: "none",
-            }}
+            ref={ref}
+            className="flex gap-5 overflow-x-auto scroll-smooth no-scrollbar"
           >
-            {videos.map((video, index) => (
-              <div
-                key={index}
-                className="shrink-0 w-full h-full"
-              >
-                {/* Video Container */}
-                <div className="aspect-video w-full overflow-hidden bg-gray-100 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <div
-                    className="h-full w-full [&>iframe]:w-full [&>iframe]:h-full"
-                    dangerouslySetInnerHTML={{ __html: video.embedCode }}
-                  />
-                </div>
+            {videos.map((v) => (
+              <div key={v.id} className="shrink-0 w-full md:w-[48%]">
+                <div className="rounded overflow-hidden shadow-md bg-gray-100">
+                  <div className="aspect-video relative">
+                    {active !== v.id ? (
+                      <button
+                        onClick={() => setActive(v.id)}
+                        className="group absolute inset-0 w-full h-full"
+                      >
+                        {/* Thumbnail */}
+                        <img
+                          src={`https://img.youtube.com/vi/${v.id}/hqdefault.jpg`}
+                          alt={v.title}
+                          className="w-full h-full object-cover"
+                        />
 
-                {/* Video Title */}
-                <h3 className="mt-3 text-sm md:text-base font-semibold text-gray-800 line-clamp-2">
-                  {video.title}
-                </h3>
+                        {/* Overlay */}
+                        <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+                          <div
+                            className="w-16 h-16 rounded-full border border-white/60 flex items-center justify-center"
+                          >
+                            <Play className="text-white/90"/>
+                          </div>
+                        </div>
+                      </button>
+                    ) : (
+                      <iframe
+                        src={`https://www.youtube.com/embed/${v.id}?autoplay=1&rel=0&modestbranding=1&controls=0&showinfo=0`}
+                        className="w-full h-full"
+                        allow="autoplay; fullscreen"
+                        allowFullScreen
+                      />
+                    )}
+                  </div>
+                </div>
+                <p className="mt-3 text-sm font-semibold text-gray-800">
+                  {v.title}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </div>
 
-      {/* Global CSS for hiding scrollbar */}
-      <style jsx>{`
-        .no-scrollbar::-webkit-scrollbar {
-          display: none;
-        }
-      `}</style>
     </section>
   );
 }

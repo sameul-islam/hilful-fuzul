@@ -1,5 +1,6 @@
 "use client"
 
+import Gallery from '@/components/body/Gallery'
 import Hero from '@/components/body/Hero'
 import ImpactSection from '@/components/body/ImpactSection'
 import ImpactVideos from '@/components/body/ImpactVideos'
@@ -15,6 +16,7 @@ const page = () => {
       <WhatWeDo/>
       <ImpactSection/>
       <ImpactVideos/>
+      <Gallery/>
     </div>
   )
 }
