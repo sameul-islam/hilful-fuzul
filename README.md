@@ -7,15 +7,3 @@ Despite its significant impact, Hilful Fuzul has been operating without an offic
 The project officially commenced on **February 2, 2026**, and will be continuously updated with new features, enhancements, and improvements to ensure the website remains a modern, functional, and engaging platform for both the community and supporters. This endeavor reflects the core values of Hilful Fuzul, and as a web developer, I am committed to maintaining the highest standards of quality, usability, and empathy in every aspect of this project.
 
 > This website is not only a technical project but also a heartfelt contribution to a humanitarian cause. Every feature, design choice, and interaction is intended to reflect the compassion and dedication of Hilful Fuzul toward the community it serves.
-
-
-
-## Development Log
-
-### Day 1 - Feb 2, 2026                   
-- Navbar component created
-- Dropdown menus implemented 
-- Hero section created
-
-### Day 2 - Feb 3, 2026
-- Created trustSection and what we do section with completly mobile responsive.

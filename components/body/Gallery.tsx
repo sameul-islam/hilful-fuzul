@@ -4,19 +4,19 @@ import { useState } from "react";
 
 // Gallery images
 const galleryImages = [
-  "/gallery/img1.webp",
-  "/gallery/img2.webp",
-  "/gallery/img3.webp",
-  "/gallery/img4.webp",
-  "/gallery/img5.webp",
-  "/gallery/img6.webp",
+  "/gallery/img1.jpeg",
+  "/gallery/img2.jpeg",
+  "/gallery/img3.jpeg",
+  "/gallery/img4.jpeg",
+  "/gallery/img5.jpeg",
+  "/gallery/img6.jpeg",
 ];
 
 export default function Gallery() {
   const [active, setActive] = useState<number | null>(null);
 
   return (
-    <section className="py-14 lg:py-20 bg-gray-50">
+    <section className="py-14 lg:py-20">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-10">
@@ -33,13 +33,13 @@ export default function Gallery() {
           {galleryImages.map((src, i) => (
             <div
               key={i}
-              className="relative rounded-lg overflow-hidden shadow-lg cursor-pointer group"
+              className="relative overflow-hidden shadow-lg cursor-pointer group"
               onClick={() => setActive(i)}
             >
               <img
                 src={src}
                 alt={`Gallery ${i + 1}`}
-                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                className="w-full h-64 object-cover transition-transform duration-300"
                 loading="lazy"
               />
 
@@ -53,14 +53,14 @@ export default function Gallery() {
       {/* Lightbox */}
       {active !== null && (
         <div
-          className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"
+          className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center"
           onClick={() => setActive(null)}
         >
           <img
             src={galleryImages[active]}
             alt={`Gallery ${active + 1}`}
             loading="lazy"
-            className="max-h-full max-w-full rounded-lg shadow-2xl"
+            className="max-h-full max-w-full shadow-2xl"
           />
         </div>
       )}
