@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import logo from "@/public/logo.png";
+import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -29,6 +30,10 @@ export default function Footer() {
               মানবিকতা, দায়িত্ব এবং স্বচ্ছতার সাথে আমরা সমাজের অসহায় মানুষের
               পাশে দাঁড়াতে প্রতিশ্রুতিবদ্ধ।
             </p>
+
+            <div className="mt-5 flex items-center gap-5 text-gray-500 cursor-pointer transition-all duration-500">
+              <Facebook className="hover:text-sky-500 transition-colors duration-500"/> <Instagram className="hover:text-pink-500 transition-colors duration-500"/> <Youtube className="hover:text-red-600 transition-colors duration-500"/> <Twitter className="hover:text-sky-500 transition-colors duration-500"/>
+            </div>
           </div>
 
           {/* Navigation */}
