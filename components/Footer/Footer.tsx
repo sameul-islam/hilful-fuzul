@@ -32,10 +32,13 @@ export default function Footer() {
             </p>
 
             <div className="mt-5 flex items-center gap-5 text-gray-500 cursor-pointer transition-all duration-500">
-             <Link href="https://www.facebook.com/share/1AMJFuT7ao/"><Facebook className="hover:text-sky-500 transition-colors duration-500"/> </Link>
-              <Instagram className="hover:text-pink-500 transition-colors duration-500"/> 
-             <Link href="https://www.youtube.com/@alriyadvlogger">  <Youtube className="hover:text-red-600 transition-colors duration-500"/>  </Link>
-              <MessageCircleMore  className="hover:text-sky-500 transition-colors duration-500"/>
+             <Link href="https://www.facebook.com/share/1AMJFuT7ao/"><Facebook size={30} className="text-sky-500 md:text-gray-800 md:hover:text-sky-500 transition-colors duration-500"/> </Link>
+
+              <Instagram size={30} className="text-pink-500 md:text-gray-800 md:hover:text-pink-500 transition-colors duration-500"/> 
+
+             <Link href="https://www.youtube.com/@alriyadvlogger">  <Youtube size={30} className="text-red-600 md:text-gray-800 md:hover:text-red-600 transition-colors duration-500"/>  </Link>
+
+              <MessageCircleMore size={30}  className="text-sky-500 md:text-gray-800 md:hover:text-sky-500 transition-colors duration-500"/>
             </div>
           </div>
 
