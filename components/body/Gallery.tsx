@@ -4,12 +4,12 @@ import { useState } from "react";
 
 // Gallery images
 const galleryImages = [
-  "/gallery/img1.jpeg",
-  "/gallery/img2.jpeg",
-  "/gallery/img3.jpeg",
-  "/gallery/img4.jpeg",
-  "/gallery/img5.jpeg",
-  "/gallery/img6.jpeg",
+  "/images/gallery/img1.jpeg",
+  "/images/gallery/img2.jpeg",
+  "/images/gallery/img3.jpeg",
+  "/images/gallery/img4.jpeg",
+  "/images/gallery/img5.jpeg",
+  "/images/gallery/img6.jpeg",
 ];
 
 export default function Gallery() {
