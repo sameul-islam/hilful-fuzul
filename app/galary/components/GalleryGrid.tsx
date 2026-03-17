@@ -24,7 +24,7 @@ export default function GalleryGrid() {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-24 px-4 bg-white">
+    <section className="py-10 md:py-20 px-4 bg-white">
 
       <div className="max-w-7xl mx-auto">
 

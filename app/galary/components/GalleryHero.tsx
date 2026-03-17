@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import heroImage from "@/public/gallery-hero.jpeg";
+import heroImage from "@/public/gallery-hero.jpg";
 
 export default function GalleryHero() {
   return (
@@ -19,7 +19,7 @@ export default function GalleryHero() {
       />
 
       {/* Dark overlay for text readability */}
-      <div className="absolute inset-0 bg-black/60"></div>
+      <div className="absolute inset-0 bg-black/40"></div>
 
       {/* Text Content */}
       <motion.div
@@ -40,3 +40,6 @@ export default function GalleryHero() {
     </section>
   );
 }
+
+
+
