@@ -1,4 +1,3 @@
-
 'use client';
 
 import { motion } from "framer-motion";
@@ -34,13 +33,12 @@ export default function EmergencyCTA() {
           {/* LEFT TEXT */}
           <div className="text-center md:text-left max-w-2xl z-10">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
-              একটি এতিম শিশুর ভবিষ্যৎ বদলে দিতে পারেন আপনিও
+              জরুরি পরিস্থিতিতে মানুষের পাশে দাঁড়ান
             </h2>
 
             <p className="mt-4 text-gray-700 leading-relaxed text-lg">
-               আপনার সামান্য সহযোগিতাও একটি শিশুর জীবনে
-                 শিক্ষা, নিরাপত্তা এবং নতুন আশার আলো নিয়ে আসতে পারে।
-                 আমাদের সাথে যুক্ত হয়ে মানবিক সহায়তার এই যাত্রার অংশ হোন।
+              প্রাকৃতিক দুর্যোগ, দুর্ঘটনা বা জরুরি পরিস্থিতিতে আপনার সামান্য সাহায্য 
+              অনেক মানুষের জীবন রক্ষা করতে পারে। এখনই দান করুন এবং তাদের সহায়তায় অংশ নিন।
             </p>
           </div>
 
