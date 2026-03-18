@@ -187,7 +187,7 @@ export default function ContactSection() {
                     <input
                       type="text"
                       name="from_name"
-                      placeholder="যেমন: আব্দুল করিম"
+                      placeholder="আপনার নাম লিখুন"
                       required
                       onFocus={() => setFocused("name")}
                       onBlur={() => setFocused(null)}
