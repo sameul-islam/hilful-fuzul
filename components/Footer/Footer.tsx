@@ -3,7 +3,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import logo from "@/public/logo.png";
-import { Facebook, Instagram, MessageCircleMore, Youtube } from "lucide-react";
+import { Facebook, Instagram } from "lucide-react";
+import { ImWhatsapp } from "react-icons/im";
+import { FiYoutube } from "react-icons/fi";
 
 export default function Footer() {
   return (
@@ -34,11 +36,11 @@ export default function Footer() {
             <div className="mt-5 flex items-center gap-5 text-gray-500 cursor-pointer transition-all duration-500">
              <Link href="https://www.facebook.com/share/1AMJFuT7ao/"><Facebook size={30} className="text-sky-500 md:text-gray-800 md:hover:text-sky-500 transition-colors duration-500"/> </Link>
 
-              <Instagram size={30} className="text-pink-500 md:text-gray-800 md:hover:text-pink-500 transition-colors duration-500"/> 
+             <Link href="https://www.instagram.com/hilfulfuzul2022">  <Instagram size={30} className="text-pink-500 md:text-gray-800 md:hover:text-pink-500 transition-colors duration-500"/>  </Link>
 
-             <Link href="https://www.youtube.com/@alriyadvlogger">  <Youtube size={30} className="text-red-600 md:text-gray-800 md:hover:text-red-600 transition-colors duration-500"/>  </Link>
+             <Link href="https://www.youtube.com/@alriyadvlogger">  <FiYoutube size={30} className="text-red-600 md:text-gray-800 md:hover:text-red-600 transition-colors duration-500"/>  </Link>
 
-              <MessageCircleMore size={30}  className="text-sky-500 md:text-gray-800 md:hover:text-sky-500 transition-colors duration-500"/>
+             <Link href="https://wa.me/8801336397653"> <ImWhatsapp size={30}  className="text-green-500 md:text-gray-800 md:hover:text-green-500 transition-colors duration-500"/> </Link> 
             </div>
           </div>
 
