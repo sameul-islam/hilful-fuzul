@@ -70,7 +70,7 @@ export default function ZakatCalculator() {
           />
           <input
             type="number"
-            placeholder="রূপা (৳)"
+            placeholder="রূপা (৳) "
             value={silver}
             onChange={(e) => setSilver(e.target.value)}
             className="w-full px-5 py-4 border rounded-2xl focus:outline-none focus:ring-2 focus:ring-amber-400 shadow-sm bg-white/60 backdrop-blur-sm"
