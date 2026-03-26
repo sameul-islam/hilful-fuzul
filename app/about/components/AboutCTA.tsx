@@ -35,7 +35,7 @@ export default function AboutCTA() {
             {/* RIGHT BUTTON */}
             <div className="flex justify-center md:justify-end">
               <motion.a
-                href="/donate"
+                href="/donation"
                 className="inline-flex items-center justify-center bg-sky-900 text-white font-semibold px-8 py-4 hover:bg-sky-800 transition"
               >
                 দান করুন
