@@ -9,7 +9,18 @@ import { FiYoutube } from "react-icons/fi";
 
 export default function Footer() {
   return (
-    <footer className="bg-sky-100 border-t border-sky-300">
+    <footer className="bg-sky-100 relative border-t border-sky-300">
+
+      {/* ── Dot Pattern (IMPORTANT) ── */}
+      <div
+        className="pointer-events-none absolute inset-0 opacity-60"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle, #94a3b8 1px, transparent 1px)",
+          backgroundSize: "26px 26px",
+        }}
+      />
+
       <div className="max-w-7xl mx-auto px-6 py-14">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
 
