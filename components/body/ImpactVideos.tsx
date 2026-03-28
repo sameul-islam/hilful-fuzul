@@ -4,7 +4,7 @@ import { useRef, useState, useEffect } from "react";
 import { ChevronsLeft, ChevronsRight, Play } from "lucide-react";
 
 const videos = [
-  { id: "rIKbjS-sP8g", title: "বন্যার্ত মানুষের পাশে দাঁড়ানো" },
+  { id: "rIKbjS-sP8g", title: "অসহায় ও দুস্থদের জন্য ঈদ উপহার" },
   { id: "WdLDs8uaeMk", title: "রমজানে খাদ্য সামগ্রী বিতরণ" },
   { id: "ucbq6ZYKtxM", title: "শীতবস্ত্র বিতরণ কার্যক্রম" },
   { id: "b8E7ky0dpQQ", title: "অসহায় পরিবারের সহায়তা" },
