@@ -45,7 +45,7 @@ export default function EmergencyCTA() {
           {/* RIGHT BUTTONS */}
           <div className="flex flex-col sm:flex-row gap-4 z-10">
             <a
-              href="/donate"
+              href="/donation"
               className="px-8 py-4 text-center bg-sky-600 text-white font-semibold rounded-full shadow-lg hover:bg-sky-700 transition transform hover:-translate-y-1"
             >
               দান করুন
