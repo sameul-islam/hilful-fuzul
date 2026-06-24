@@ -1,6 +1,6 @@
 "use client"
 
-import Announcement from '@/components/body/Announcement'
+// import Announcement from '@/components/body/Announcement'
 import Gallery from '@/components/body/Gallery'
 import Hero from '@/components/body/Hero'
 import ImpactSection from '@/components/body/ImpactSection'
@@ -14,7 +14,7 @@ const page = () => {
   return (
     <div>
       <Hero/>
-      <Announcement/>
+      {/* <Announcement/> */}
       <TrustSection/>
       <WhatWeDo/>
       <ImpactSection/>

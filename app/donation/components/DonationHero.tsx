@@ -21,13 +21,13 @@ export default function DonationHero() {
       </div>
 
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/20 md:bg-black/40" />
+      {/* <div className="absolute inset-0 bg-black/20 md:bg-black/40" /> */}
 
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-linear-to-b from-black/70 via-black/50 to-black/80" />
+      {/* <div className="absolute inset-0 bg-linear-to-b from-black/70 via-black/50 to-black/80" /> */}
 
       {/* Content */}
-      <div className="relative z-10 max-w-5xl mx-auto px-4 text-center text-white">
+      {/* <div className="relative z-10 max-w-5xl mx-auto px-4 text-center text-white">
 
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
@@ -51,10 +51,10 @@ export default function DonationHero() {
           আপনার সামান্য সহযোগিতা একজন এতিম শিশু, একজন প্রতিবন্ধী মানুষ 
           বা একজন অসহায় বয়স্ক মানুষের জীবনে নতুন আশা নিয়ে আসতে পারে। 
           আজই দান করুন এবং একটি মানবিক পরিবর্তনের অংশ হোন।
-        </motion.p>
+        </motion.p> */}
 
         {/* CTA Buttons */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.8 }}
@@ -77,7 +77,7 @@ export default function DonationHero() {
 
         </motion.div>
 
-      </div>
+      </div> */}
 
       {/* Bottom Fade */}
       {/* <div className="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-t from-white to-transparent" /> */}
